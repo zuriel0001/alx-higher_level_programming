@@ -3,7 +3,8 @@
 
 """
 all possible different combinations of two digits in ascending order
-the two digits must not be identical (01 & 10) or (23 & 32) are considered identical.
+the two digits must not be identical (01 & 10) or (23 & 32) are
+considered identical.
 """
 for first_digit in range(0, 10):
 
