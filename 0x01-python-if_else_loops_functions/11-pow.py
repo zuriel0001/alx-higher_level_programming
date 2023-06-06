@@ -3,5 +3,5 @@
 
 def pow(a, b):
     """ determine exponents of a number raised to another num"""
-    a^b = (a**b)
-    return(a^b)
+    exp = (a**b)
+    return(exp)
