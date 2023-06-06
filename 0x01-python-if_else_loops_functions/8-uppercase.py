@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 # 8-uppercase.py
 
-def uppercase(str):
 
-    """function to print alphqbets in uppercase."""
-    for alphabet in str:
-        if ord(alphabet) >= 97 and ord(alphabet) <= 122:
-            alphabet = chr(ord(alphabet) - 32)
-        print("{}".format(alphabet), end="")
+def uppercase(str):
+    """Print a string in uppercase."""
+    for c in str:
+        if ord(c) >= 97 and ord(c) <= 122:
+            c = chr(ord(c) - 32)
+        print("{}".format(c), end="")
     print("")
