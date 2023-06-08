@@ -7,5 +7,5 @@ if __name__ == "__main__":
 
     a = 1
     b = 2
-
-    print("{} + {} = {}".format(a, b, add(a, b)))
+    the_sum = add(a, b)
+    print("{} + {} = {}".format(a, b, the_sum))
