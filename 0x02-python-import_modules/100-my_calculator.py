@@ -16,5 +16,6 @@ if __name__ == "__main__":
     opps = {"+": add, "-": sub, "*": mul, "/": div}
     if (sys.argv[2]) not in opps:
         print("Unknown operator. Available operators: +, -, * and /")
+        exit(1)
 
     print("{} {} {} = {}".format(a, sys.argv[2], b, opps[sys.argv[2]](a, b)))
