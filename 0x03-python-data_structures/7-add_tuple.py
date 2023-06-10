@@ -2,6 +2,9 @@
 
 
 def add_tuple(tuple_a=(), tuple_b=()):
+    x_comp = ""
+    y_comp = ""
+
     tuple_a += (0, 0)
     tuple_b += (0, 0)
 
