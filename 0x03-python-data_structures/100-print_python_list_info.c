@@ -8,7 +8,7 @@
 void print_python_list_info(PyObject *p)
 {
 	int size, alloc, idx;
-	PyObject *elememt;
+	PyObject *element;
 
 	size = Py_SIZE(p);
 	alloc = ((PyListObject *)p)->allocated;
@@ -17,12 +17,12 @@ void print_python_list_info(PyObject *p)
 	printf("[*] Allocated = %d\n", alloc);
 
 	idx = 0; 
-	while (i < size)
+	while (idx < size)
 	{
 		printf("Element %d: ", idx);
 
 		element = PyList_GetItem(p, idx);
-		printf("%s\n", Py_TYPE(obj)->tp_name);
+		printf("%s\n", Py_TYPE(element)->tp_name);
 		idx++;
 	}
 }
