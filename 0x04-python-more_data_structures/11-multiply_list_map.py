@@ -3,4 +3,4 @@
 
 def multiply_list_map(my_list=[], number=0):
     """a function that returns a list with all values multiplied by a number"""
-    return (list(map((lambda i: i * number), my_list)))
+    return (list(map(lambda num: num * number, my_list)))
