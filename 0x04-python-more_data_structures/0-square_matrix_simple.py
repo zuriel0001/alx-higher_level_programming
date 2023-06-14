@@ -3,10 +3,9 @@
 
 def square_matrix_simple(matrix=[]):
 
-    new_matrix = matrix.copy()
-
-    for i in range(len(matrix)):
-        num_sq = lambda x: x**2
-        new_matrix[i] = list(map(num_sq, matrix[i]))
+    new_matrix = []
+    for row in matrix:
+        new_row = [num**2 for num in row]
+        new_matrix.append(new_row)
 
     return (new_matrix)
