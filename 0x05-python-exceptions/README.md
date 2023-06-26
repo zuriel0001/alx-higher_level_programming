@@ -34,5 +34,5 @@ Each script can be executed by running the corresponding main.py file located in
 Make sure you have Python 3 installed on your system.
 
 ## Author
-This repository was created by zuriel0001.
+This repository was created by [zuriel0001](https://github.com/zuriel0001).
 
