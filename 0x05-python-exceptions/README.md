@@ -1,4 +1,6 @@
-0x05-python-exceptions
+**0x05-python-exceptions**
+
+
 This repository contains Python scripts that demonstrate various concepts related to exceptions handling in Python. Each script focuses on a specific topic and provides examples and explanations.
 
 Files
