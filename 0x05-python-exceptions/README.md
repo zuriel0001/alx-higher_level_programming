@@ -33,7 +33,7 @@ Each script can be executed by running the corresponding main.py file located in
 ##Usage
 Each script can be executed by running the corresponding main.py file located in the test directory.
 For example, to use  **80-safe_print_list.py**, module,
-- copy **0-main.py** to the `0x05-python-exceptions` directory
+- copy **0-main.py** to the **0x05-python-exceptions** directory
 - using `cp 0-main.py ../` and
 - run `./0-main.py`
 
