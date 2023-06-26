@@ -32,7 +32,10 @@ Each script can be executed by running the corresponding main.py file located in
 
 ##Usage
 Each script can be executed by running the corresponding main.py file located in the test directory.
-For example, to run `0-safe_print_list.py`, cp **0-main.py** to the `0x05-python-exceptions` directory using `cp 0-main.py ../` and run `./0-main.py`
+For example, to use  **80-safe_print_list.py**, module,
+- copy **0-main.py** to the `0x05-python-exceptions` directory
+- using `cp 0-main.py ../` and
+- run `./0-main.py`
 
 Make sure you have Python 3 installed on your system.
 
