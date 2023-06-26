@@ -1,0 +1,6 @@
+#!/usr/python3
+
+def raise_exception_msg(message=""):
+
+    """ a function that raises a name exception with a message """
+    except NameError(message)
