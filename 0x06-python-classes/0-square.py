@@ -3,5 +3,5 @@
 
 
 class Square:
-
+    """a Square class"""
     pass
