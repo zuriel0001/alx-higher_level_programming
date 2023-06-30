@@ -23,14 +23,14 @@ that value is equivalent to using the ``+`` operator.
     >>> add_integer(2, -3)
     -1
 
-The function also works with floating-point values.
+The ``add_integer(...)``` function also works with floating-point values.
 
 ::
 
     >>> add_integer(2.0, 3.0)
     5
 
-Note that floats are casted to ints before addition is performed.
+Kindly Note that floats are casted to ints before addition is performed per ``add_integer(...)``` implentation
 
 ::
 
@@ -56,10 +56,11 @@ The second argument is optional - by default, it is 98.
     >>> add_integer(2)
     100
 
-Non-Numbers
-===========
+======================================
+Handling instancess of Non Numeric arg
+======================================
 
-``add_integer()`` expects that both arguments are either integers or floats.
+``add_integer()`` implementation requires that both arguments are either integers or floats.
 If either argument is a non-integer and non-float, a TypeError is raised:
 
 ::
@@ -86,7 +87,7 @@ If either argument is a non-integer and non-float, a TypeError is raised:
     Traceback (most recent call last):
     TypeError: b must be an integer
 
-If both arguments are non-integers and non-floats, a TypeError message is only
+Intances where both arguments are non-integers and non-floats, a TypeError message is only
 printed for the first argument.
 
 ::
