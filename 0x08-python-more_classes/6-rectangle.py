@@ -5,6 +5,7 @@
 class Rectangle:
     """Represent a rectangle."""
 
+    """num_of_instances (int): The number of Rectangle instances"""
     num_of_instances = 0
 
     def __init__(self, width=0, height=0):
@@ -16,6 +17,7 @@ class Rectangle:
         """
         self.width = width
         self.height = height
+        type(self).num_of_instances += 1
 
     @property
     def width(self):
