@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+# 0-rectangle.py
+# Zuriel0001
 """Defines a Rectangle class."""
 
 
 class Rectangle:
-    """empty class Rectangle that defines a rectangle"""
+    """Represent a rectangle."""
     pass
