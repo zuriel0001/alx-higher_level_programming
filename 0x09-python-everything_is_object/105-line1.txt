@@ -1,1 +1,1 @@
-262
+262 :)In CPython, small integers within a certain range are pre-allocated and shared among multiple objects to improve performance and memory efficiency. These pre-allocated integers are commonly used for small integer values, typically ranging from -5 to 256.
