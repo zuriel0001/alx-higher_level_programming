@@ -2,7 +2,7 @@
 
 """Solves the N-queens puzzle.
 
-This function determines all possible solutions to placing 
+This function determines all possible solutions to placing
 N N non-attacking queens on an NxN chessboard.
 
 Example:
@@ -25,8 +25,8 @@ import sys
 def init_board(n):
     """Initialize an `n`x`n` sized chessboard with 0's."""
     board = []
-    [board.append([]) for i in range(n)]
-    [row.append(' ') for i in range(n) for row in board]
+    [board.append([]) for num in range(n)]
+    [row.append(' ') for num in range(n) for row in board]
     return (board)
 
 
@@ -106,11 +106,11 @@ def recursive_solve(board, row, queens, solutions):
 
     Args:
         board (list): The current working chessboard.
-        row (int): The current working row.
+        row (int): The active row.
         queens (int): The current number of placed queens.
         solutions (list): A list of lists of solutions.
     Returns:
-        solutions
+        solutions gotten
     """
     if queens == len(board):
         solutions.append(get_solution(board))
