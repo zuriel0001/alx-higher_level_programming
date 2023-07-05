@@ -36,7 +36,6 @@ def board_deepcopy(board):
         return list(map(board_deepcopy, board))
     return (board)
 
-
 def get_solution(board):
     """Return the list of lists representation of a solved chessboard."""
     solution = []
@@ -51,7 +50,7 @@ def get_solution(board):
 def xout(board, row, col):
     """X out spots on a chessboard.
 
-    All spots where non-attacking queens can no
+    All spots on te board where non-attacking queens can no
     longer be played are X-ed out.
 
     Args:
