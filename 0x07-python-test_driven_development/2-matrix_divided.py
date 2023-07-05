@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Define matrix division"""
 
 
 def matrix_divided(matrix, div):
