@@ -29,7 +29,6 @@ def init_board(n):
     [row.append(' ') for num in range(n) for row in board]
     return (board)
 
-
 def board_deepcopy(board):
     """Return a deepcopy of a chessboard."""
     if isinstance(board, list):
@@ -45,7 +44,6 @@ def get_solution(board):
                 solution.append([r, c])
                 break
     return (solution)
-
 
 def xout(board, row, col):
     """X out spots on a chessboard.
