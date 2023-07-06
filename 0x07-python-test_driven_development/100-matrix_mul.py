@@ -67,6 +67,7 @@ def matrix_mul(m_a, m_b):
     if len(m_a) == 1:
         return [[m_a[0][0] * m_b[0][0]]]
 
+    
     else:
         n = len(m_a)
         a11 = [[0 for j in range(n//2)] for i in range(n//2)]
