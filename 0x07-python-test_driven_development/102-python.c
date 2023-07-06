@@ -20,7 +20,7 @@ void print_python_string(PyObject *p)
 		return;
 	}
 
-	len = ((PyASCIIObject *)(p))->len;
+	len = ((PyASCIIObject *)(p))->length;
 
 	/* Check if the string is a compact ASCII string */
 	if (PyUnicode_IS_COMPACT_ASCII(p))
