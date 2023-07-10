@@ -57,7 +57,7 @@ Normal list test 2:
 Negative ints list test:
     >>> ml = MyList([-100, -76, -132555, 0, -24423434, -123, 1])
     >>> ml.print_sorted()
-    [-24423434, -132555, -100, -123, -76, 0, 1]
+    [-24423434, -132555, -123, -100, -76, 0, 1]
 
 Original list unchanged:
     >>> ml = MyList([2, 3, 1, -10, 20, 33, 0])
