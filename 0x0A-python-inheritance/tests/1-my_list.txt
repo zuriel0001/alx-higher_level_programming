@@ -64,7 +64,7 @@ Original list unchanged:
     >>> ml.print_sorted()
     [-10, 0, 1, 2, 3, 20, 33]
     >>> ml
-    [2, 10, 1, -10, 20, 33, 0]
+    [2, 3, 1, -10, 20, 33, 0]
 
 List already in order:
     >>> ml = MyList([-10, 0, 1, 2, 3, 20, 33])
