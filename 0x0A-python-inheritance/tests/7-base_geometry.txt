@@ -68,9 +68,9 @@ integer_validator method float.0 value:
     TypeError: foo must be an integer
 
 integer_validator method float.x value:
-    >>> bg.integer_validator("arg", 3.14)
+    >>> bg.integer_validator("nums", 3.14)
     Traceback (most recent call last):
-    TypeError: arg must be an integer
+    TypeError: nums must be an integer
 
 integer_validator method string value:
     >>> bg.integer_validator("Bar", "bar")
@@ -88,9 +88,9 @@ integer_validator method list value:
     TypeError: a must be an integer
 
 integer_validator method None value:
-    >>> bg.integer_validator("foo", None)
+    >>> bg.integer_validator("Sleep", None)
     Traceback (most recent call last):
-    TypeError: foo must be an integer
+    TypeError: Sleep must be an integer
 
 integer_validator method 0 value:
     >>> bg.integer_validator("key", 0)
@@ -98,9 +98,9 @@ integer_validator method 0 value:
     ValueError: key must be greater than 0
 
 integer_validator method negative value:
-    >>> bg.integer_validator("key", -1000)
+    >>> bg.integer_validator("Neg", -1000)
     Traceback (most recent call last):
-    ValueError: key must be greater than 0
+    ValueError: Neg must be greater than 0
 
 integer_validator method ok value:
     >>> bg.integer_validator("key", 98)
@@ -120,6 +120,6 @@ integer_validator method tuple:
     TypeError: Foo must be an integer
 
 integer_validator method dic:
-    >>> bg.integer_validator("Foo", {1, 2})
+    >>> bg.integer_validator("Able", {1, 2})
     Traceback (most recent call last):
-    TypeError: Foo must be an integer
+    TypeError: Able must be an integer
