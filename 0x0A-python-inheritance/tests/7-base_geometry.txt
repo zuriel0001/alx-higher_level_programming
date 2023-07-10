@@ -63,17 +63,17 @@ integer_validator method arg test (3 args):
     TypeError: integer_validator() takes 3 positional arguments but 4 were given
 
 integer_validator method float.0 value:
-    >>> bg.integer_validator("foo", 3.0)
+    >>> bg.integer_validator("foo", 37.0)
     Traceback (most recent call last):
     TypeError: foo must be an integer
 
 integer_validator method float.x value:
-    >>> bg.integer_validator("nums", 3.14)
+    >>> bg.integer_validator("nums", 8.14)
     Traceback (most recent call last):
     TypeError: nums must be an integer
 
 integer_validator method string value:
-    >>> bg.integer_validator("Bar", "bar")
+    >>> bg.integer_validator("Bar", "man")
     Traceback (most recent call last):
     TypeError: Bar must be an integer
 
@@ -98,7 +98,7 @@ integer_validator method 0 value:
     ValueError: key must be greater than 0
 
 integer_validator method negative value:
-    >>> bg.integer_validator("Neg", -1000)
+    >>> bg.integer_validator("Neg", -10)
     Traceback (most recent call last):
     ValueError: Neg must be greater than 0
 
