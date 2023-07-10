@@ -73,6 +73,7 @@ List already in order:
 
 Test append:
     >>> ml = MyList()
+    >>> ml.append(9)
     >>> ml.append(10)
     >>> ml
-    [10]
+    [9, 10]
