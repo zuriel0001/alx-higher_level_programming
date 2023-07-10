@@ -1,5 +1,4 @@
 # 1-my_list.txt
-# Brennan D Baraban <375@holbertonschool.com>
 
 =======================
 How to Use 1-my_list.py
@@ -7,10 +6,11 @@ How to Use 1-my_list.py
 
 This module defines a class ``MyList`` that inherits from ``list``.
 
+=============
 Instantiation
 =============
 
-``MyList`` can be instantiated with no arguments, which will return
+When ``MyList`` can be instantiated with no arguments but returns
 an empty list:
 
 ::
@@ -25,13 +25,13 @@ an empty list:
     >>> print(my_list)
     []
 
-Or a single argument, which must be an iterable object.
+When instantiated with a single argument, it must be an iterable object.
 
 ::
 
-    >>> my_list = MyList([1, 2, 3])
+    >>> my_list = MyList([2, 3, 4])
     >>> print(my_list)
-    [1, 2, 3]
+    [2, 3, 4]
 
 ::
 
@@ -48,8 +48,10 @@ A ``TypeError`` will be raised for any more than one instantiation arguments.
     Traceback (most recent call last):
     TypeError: list() takes at most 1 argument (2 given)
 
-Usage
-=====
+
+======================
+Hoe to Use The Program
+======================
 
 ``MyList`` is an inherited ``list`` class, and thus features the same methods.
 For instance, elements can be added to a ``MyList`` with the ``append()`` method.
@@ -111,20 +113,21 @@ The method prints the list in ascending sorted order.
     >>> my_list.append(2)
     >>> my_list.append(3)
     >>> my_list.append(5)
+    >>> my_list.append(6)
     >>> print(my_list)
-    [1, 4, 2, 3, 5]
+    [1, 4, 2, 3, 5, 6]
 
 ::
 
     >>> my_list.print_sorted()
-    [1, 2, 3, 4, 5]
+    [1, 2, 3, 4, 5, 6]
 
 The order of the original list is not altered after a call to the method.
 
 ::
 
     >>> print(my_list)
-    [1, 4, 2, 3, 5]
+    [1, 4, 2, 3, 5, 6]
 
 Note that lists of strings are sorted lexographically.
 
@@ -134,22 +137,22 @@ Note that lists of strings are sorted lexographically.
     >>> my_list.append("Brennan")
     >>> my_list.append("Poppy")
     >>> my_list.append("School")
-    >>> my_list.append("Holberton")
+    >>> my_list.append("Alx")
     >>> my_list.append("Betty")
     >>> print(my_list)
-    ['Brennan', 'Poppy', 'School', 'Holberton', 'Betty']
+    ['Brennan', 'Poppy', 'School', 'Alx', 'Betty']
 
 ::
 
     >>> my_list.print_sorted()
-    ['Betty', 'Brennan', 'Holberton', 'Poppy', 'School']
+    ['Alx', 'Betty', 'Brennan', 'Poppy', 'School']
 
 Another friendly reminder that the original list is unaltered :)
 
 ::
 
     >>> print(my_list)
-    ['Brennan', 'Poppy', 'School', 'Holberton', 'Betty']
+    ['Brennan', 'Poppy', 'School', 'Alx', 'Betty']
 
 Nothing to sort with empty lists.
 
