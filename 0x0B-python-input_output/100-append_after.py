@@ -12,9 +12,6 @@ def append_after(filename="", search_string="", new_string=""):
         new_string (str): The string to append after each occurrence of
                           the search string.
 
-    Returns:
-        None
-
     Raises:
         FileNotFoundError: If the specified file is not found.
 
