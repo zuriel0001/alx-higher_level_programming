@@ -15,8 +15,7 @@ class Student:
         if atrrs is None:
             return (self.__dict__)
 
-        new_dict = {}
-        for key, value in self.__dict__.items():
-            if key in attrs:
-                new_dict[key] = value
-        return (new_dict)
+        if (type(attrs) == list and all(type(ele) == str for ele in attrs)):
+            return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
+
+        return self.__dict__
