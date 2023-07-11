@@ -15,5 +15,8 @@ class Student:
         if atrrs is None:
             return (self.__dict__)
 
-        new_dict = {key: value for key, value in self.__dict__.items() if key in attrs}
+        new_dict = {}
+        for key, value in self.__dict__.items():
+            if key in attrs:
+                new_dict[key] = value
         return (new_dict)
