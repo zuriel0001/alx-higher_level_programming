@@ -11,7 +11,13 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """ Initializes instances """
+        """Initializes a Square object with an optional ID.
+
+        Args:
+          id (int, optional): The ID of the Square object.
+          If not provided, a unique ID will be assigned automatically.
+        """
+
         if id is not None:
             self.id = id
         else:
@@ -20,14 +26,31 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """ List to JSON string """
+        """Converts a list of dictionaries to a JSON string representation.
+
+        Args:
+          list_dictionaries (list): A list of dictionaries representing obj.
+
+        Returns:
+          str: A JSON string representation of the list of dictionaries.
+
+        """
+
         if list_dictionaries is None or list_dictionaries == "[]":
             return "[]"
         return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """ Save object in a file """
+        """Saves a list of objects to a JSON file.
+
+        Args:
+          list_objs (list): A list of objects to be saved.
+
+        Returns:
+          None
+
+        """
         filename = "{}.json".format(cls.__name__)
         list_dic = []
 
@@ -44,24 +67,48 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        """ JSON string to dictionary """
+        """Converts a JSON string representation to a list of dictionaries.
+
+        Args:
+          json_string (str): A JSON string representation.
+
+        Returns:
+          list: A list of dictionaries converted from the JSON string.
+
+        """
         if not json_string:
             return []
         return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionary):
-        """ Method that create an instance """
+        """
+        Creates a new instance of the class with the given dictionary.
+
+        Args:
+        **dictionary: Keyword arguments representing the attributes of
+        the instance.
+
+        Returns:
+          object: A new instance of the class.
+
+        """
         if cls.__name__ == "Rectangle":
             new = cls(10, 10)
         else:
             new = cls(10)
         new.update(**dictionary)
-        return new
+        return (new)
 
     @classmethod
     def load_from_file(cls):
-        """ Method that returns a list of instances """
+        """
+        Loads a list of instances from a JSON file.
+
+        Returns:
+          list: A list of instances loaded from the JSON file.
+
+        """
         filename = "{}.json".format(cls.__name__)
 
         if os.path.exists(filename) is False:
@@ -80,7 +127,16 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
-        """ Method that saves a CSV file """
+        """
+        Saves a list of objects to a CSV file.
+
+        Args:
+          list_objs (list): A list of objects to be saved.
+
+        Returns:
+          None
+
+        """
         filename = "{}.csv".format(cls.__name__)
 
         if cls.__name__ == "Rectangle":
@@ -107,7 +163,13 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
-        """ Method that loads a CSV file """
+        """
+        Loads a list of instances from a CSV file.
+
+        Returns:
+          list: A list of instances loaded from the CSV file.
+
+        """
         filename = "{}.csv".format(cls.__name__)
 
         if os.path.exists(filename) is False:
@@ -135,4 +197,4 @@ class Base:
         for index in range(len(matrix)):
             list_ins.append(cls.create(**matrix[index]))
 
-        return list_ins
+        return (list_ins)
