@@ -11,22 +11,22 @@ class Square(Rectangle):
     """ Represent the Class Rectangle """
 
     def __init__(self, size, x=0, y=0, id=None):
-        """ Initializes instances """
+        """ Initializes instances of the odjects"""
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
-        """ str special method """
+        """Return a string representation of the Square instance."""
         str_square = "[Square] "
         str_id = "({}) ".format(self.id)
         str_xy = "{}/{} - ".format(self.x, self.y)
         str_wh = "{}/{}".format(self.width, self.height)
 
-        return str_square + str_id + str_xy + str_wh
+        return (str_square + str_id + str_xy + str_wh)
 
     @property
     def size(self):
         """ Get size value """
-        return self.width
+        return (self.width)
 
     @size.setter
     def size(self, value):
@@ -44,7 +44,18 @@ class Square(Rectangle):
         return (str_rectangle + str_id + str_xy + str_size)
 
     def update(self, *args, **kwargs):
-        """ Method to update class square """
+        """Update the attributes of the Square object.
+
+        Args:
+          *args: Variable length arg list representing the attrs to be updated.
+          **kwargs: Keyword arg representing the attributes to be updated.
+
+        Notes:
+          If both *args and **kwargs are provided, *args takes precedence.
+          The 'size' attribute can be updated through either 'size' or 'width'
+          and 'height' attributes.
+
+        """
 
         if args is not None and len(args) is not 0:
             list_atr = ['id', 'size', 'x', 'y']
