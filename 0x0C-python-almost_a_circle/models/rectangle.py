@@ -61,7 +61,17 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
-        """ Set x value """
+        """
+        Set the value of x.
+
+        Args:
+          value (int): The new value for x.
+
+        Raises:
+          TypeError: If the value is not an integer.
+          ValueError: If the value is less than 0.
+
+        """
         if type(value) is not int:
             raise TypeError("x must be an integer")
         if value < 0:
@@ -105,7 +115,19 @@ class Rectangle(Base):
         return (str_rectangle + str_id + str_xy + str_wh)
 
     def update(self, *args, **kwargs):
-        """ update & return the area value of the Rectangle instance"""
+        """Update the attributes of the Rectangle instance.
+
+        Args:
+          *args: Variable length argument list representing the attributes
+          in the order:  id, width, height, x, y.
+
+        **kwargs: Arbitrary keyword arguments representing the attributes as
+        key-value pairs.
+
+        Returns:
+          None
+
+        """
         if args is not None and len(args) is not 0:
             list_atr = ['id', 'width', 'height', 'x', 'y']
             for i in range(len(args)):
