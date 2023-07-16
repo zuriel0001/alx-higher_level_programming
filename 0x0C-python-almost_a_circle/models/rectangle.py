@@ -9,7 +9,17 @@ class Rectangle(Base):
     """ Represent Class Rectangle """
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """ Initialize instances """
+        """ Initialize instances of the Class
+
+        Args:
+          width (int): The width of the object.
+          height (int): The height of the object.
+          x (int, optional): The x-coordinate of the object's position.
+          y (int, optional): The y-coordinate of the object's position.
+          id (int, optional): The ID of the object. If not provided,
+                              a unique ID will be assigned automatically.
+
+        """
         self.width = width
         self.height = height
         self.x = x
@@ -112,4 +122,4 @@ class Rectangle(Base):
         for key in list_atr:
             dict_res[key] = getattr(self, key)
 
-        return dict_res
+        return (dict_res)
