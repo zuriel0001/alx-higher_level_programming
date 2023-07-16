@@ -11,14 +11,14 @@ from unittest.mock import patch
 
 
 class TestBaseMethods(unittest.TestCase):
-    """ to test Base class """
+    """ Test suite for the Base class """
 
     def setUp(self):
-        """ Method invoked for each test """
+        """Set up method invoked before each test"""
         Base._Base__nb_objects = 0
 
     def test_id(self):
-        """ Test assigned id """
+        """Test the assigned id value."""
         new = Base(1)
         self.assertEqual(new.id, 1)
 
@@ -28,7 +28,8 @@ class TestBaseMethods(unittest.TestCase):
         self.assertEqual(new.id, 1)
 
     def test_id_nb_objects(self):
-        """ Test nb object attribute """
+        """Test the id attribute incremented by the
+        number of created objects."""
         new = Base()
         new2 = Base()
         new3 = Base()
@@ -37,7 +38,8 @@ class TestBaseMethods(unittest.TestCase):
         self.assertEqual(new3.id, 3)
 
     def test_id_mix(self):
-        """ Test nb object attributes and assigned id """
+        """Test a combination of incremented id
+        attribute and assigned id."""
         new = Base()
         new2 = Base(1024)
         new3 = Base()
@@ -56,13 +58,13 @@ class TestBaseMethods(unittest.TestCase):
             new = Base(1, 1)
 
     def test_access_private_attrs(self):
-        """ Test accessing to private attributes """
+        """ Test accessing private attributes """
         new = Base()
         with self.assertRaises(AttributeError):
             new.__nb_objects
 
     def test_save_to_file_1(self):
-        """ Test JSON file """
+        """Test saving to a JSON file with None as input."""
         Square.save_to_file(None)
         res = "[]\n"
         with open("Square.json", "r") as file:
@@ -80,7 +82,7 @@ class TestBaseMethods(unittest.TestCase):
             self.assertEqual(file.read(), "[]")
 
     def test_save_to_file_2(self):
-        """ Test JSON file """
+        """Test saving to a JSON file with None and empty list as input."""
         Rectangle.save_to_file(None)
         res = "[]\n"
         with open("Rectangle.json", "r") as file:
