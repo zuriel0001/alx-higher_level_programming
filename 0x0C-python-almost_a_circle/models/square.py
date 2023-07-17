@@ -57,7 +57,7 @@ class Square(Rectangle):
 
         """
 
-        if args is not None and len(args) is not 0:
+        if args is not None and len(args) != 0:
             list_atr = ['id', 'size', 'x', 'y']
             for i in range(len(args)):
                 if list_atr[i] == 'size':
