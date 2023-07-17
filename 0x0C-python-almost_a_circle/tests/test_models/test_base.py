@@ -74,7 +74,7 @@ class TestBaseMethods(unittest.TestCase):
 
         try:
             os.remove("Square.json")
-        except:
+        except Exception:
             pass
 
         Square.save_to_file([])
@@ -91,7 +91,7 @@ class TestBaseMethods(unittest.TestCase):
                 self.assertEqual(str_out.getvalue(), res)
         try:
             os.remove("Rectangle.json")
-        except:
+        except Exception:
             pass
 
         Rectangle.save_to_file([])
