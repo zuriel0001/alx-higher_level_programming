@@ -141,7 +141,7 @@ class TestSquareMethods(unittest.TestCase):
     def test_load_from_file(self):
         """ Test load JSON file """
         load_file = Square.load_from_file()
-        self.assertEqual(load_file, load_file)
+        self.assertEqual(load_file, [])
 
     def test_area_2(self):
         """ Checking the return value of area method """
