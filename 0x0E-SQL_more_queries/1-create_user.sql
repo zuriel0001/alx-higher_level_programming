@@ -1,6 +1,11 @@
--- creates the MySQL server user user_0d_1 and grant all priviledges and password user_0d_1_pwd
--- user_0d_1 must have all privileges on your MySQL server
+-- Check if the user exists
+SELECT 1 FROM mysql.user WHERE user = 'user_0d_1' LIMIT 1;
 
-CREATE USER IF NOT EXISTS 'user_0d_1'@'localhost' IDENTIFIED BY 'user_0d_1_pwd';
-GRANT ALL PRIVILEGES ON * . * TO 'user_0d_1'@'localhost';
+-- If the user doesn't exist, create it
+CREATE USER IF NOT EXISTS 'user_0d_1'@'%' IDENTIFIED BY 'user_0d_1_pwd';
+
+-- Grant all privileges to the user
+GRANT ALL PRIVILEGES ON *.* TO 'user_0d_1'@'%';
+
+-- Flush privileges to apply changes
 FLUSH PRIVILEGES;
