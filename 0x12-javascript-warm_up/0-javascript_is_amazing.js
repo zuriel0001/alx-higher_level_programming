@@ -1,3 +1,3 @@
 #!/usr/bin/node
-const jsisfun = 'Javascript is amazing';
-console.log(jsisfun);
+const myVar = 'Javascript is amazing';
+console.log(myVar);
