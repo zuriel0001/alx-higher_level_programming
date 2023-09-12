@@ -4,6 +4,6 @@ if (process.argv.length <= 3) {
 } else {
   process.argv.shift();
   process.argv.shift();
-  const Myarray = process.argv.map(Number).sort((a, b) => a - b).reverse();
-  console.log(Myarray[1]);
+  const nums = process.argv.map(Number).sort((a, b) => a - b).reverse();
+  console.log(nums[1]);
 }
