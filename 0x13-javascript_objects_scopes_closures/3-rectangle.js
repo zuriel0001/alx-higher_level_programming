@@ -17,4 +17,3 @@ print () {
 }
 
 module.exports = Rectangle;
-
