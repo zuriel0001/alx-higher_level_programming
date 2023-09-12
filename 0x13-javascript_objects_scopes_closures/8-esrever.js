@@ -10,3 +10,4 @@ exports.esrever = function (list) {
     len--;
   }
   return list;
+};
