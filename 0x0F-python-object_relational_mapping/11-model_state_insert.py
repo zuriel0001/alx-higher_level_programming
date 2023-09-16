@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """
+Add a new name "Louisiana" to the state database
 """
 import sys
 from model_state import Base, State
