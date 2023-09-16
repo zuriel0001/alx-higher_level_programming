@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-Script that lists all State objects that contain the letter a from the database
+Script that lists all State objects that contain the letter 'a' from the database
 """
 import sys
 from model_state import Base, State
