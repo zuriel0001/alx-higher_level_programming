@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+"Model for peak finder"
+
 def find_peak(list_of_integers):
     """
     Finds a peak in list_of_integers.
