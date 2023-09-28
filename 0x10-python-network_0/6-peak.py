@@ -26,12 +26,12 @@ def find_peak(list_of_integers):
         return max(list_of_integers)
 
     middle_index = int(integers_count / 2)
-    peak_element = list_of_integers[middle_index]
+    peak = list_of_integers[middle_index]
 
-    if peak_element > list_of_integers[middle_index - 1] and
-    peak_element > list_of_integers[middle_index + 1]:
-        return peak_element
-    elif peak_element < list_of_integers[middle_index - 1]:
+    if peak > list_of_integers[middle_index - 1] and\
+            peak > list_of_integers[middle_index + 1]:
+        return peak
+    elif peak < list_of_integers[middle_index - 1]:
         return find_peak(list_of_integers[:middle_index])
     else:
         return find_peak(list_of_integers[middle_index + 1:])
